@@ -26,4 +26,26 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <ion-img class="picture" [src]="picture"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          {{ name}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          {{ email  }}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

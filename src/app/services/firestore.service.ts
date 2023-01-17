@@ -12,9 +12,10 @@ export class FirestoreService {
     return collection.doc(id).set(data);
   }
 
-  getDoc(data: any, path: string, id: string) {
-    const collection = this.database.collection(path);
-    return collection.doc(id).valueChanges;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  getDoc<tipo>(path: string, id: string) {
+    const collection = this.database.collection<tipo>(path);
+    return collection.doc(id).valueChanges();
   }
 
   deleteDoc(path: string, id: string) {

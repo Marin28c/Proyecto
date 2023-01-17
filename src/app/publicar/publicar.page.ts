@@ -95,9 +95,9 @@ export class PublicarPage implements OnInit {
     if (event.target.files && event.target.files[0]) {
       this.newFile = event.target.files[0];
       const reader = new FileReader();
-      reader.onload = (image) => {
-        this.newImage = image.target.result as string;
-      };
+      reader.onload = ((image) => {
+        this.newPublicacion.foto = image.target.result as string;
+      });
       reader.readAsDataURL(event.target.files[0]);
     }
   }

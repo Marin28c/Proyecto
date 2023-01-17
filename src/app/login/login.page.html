@@ -5,28 +5,26 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> Login </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-    <form [formGroup]="formularioLogin">
-      <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input formControlName="usuario"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input formControlName="password" type="password"></ion-input>
-      </ion-item>
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Usuario:
+    </ion-label>
+    <ion-input [(ngModel)]="login.usuario" class="normal" type="text" inputmode="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="normal" position="floating">
+      Contraseña:
+    </ion-label>
+    <ion-input [(ngModel)]="login.email" class="normal" type="password" inputmode="password"></ion-input>
+  </ion-item>
+
+
+    <ion-button [routerLink] = "['/inicio']">Login</ion-button>
   
-    </form>
-    <ion-button (click)="ingresar()">
-      Ingresar
-    </ion-button>
-    </ion-card-content>
-    </ion-card>
-  </ion-content>|
+  </ion-content>
+
+<ion-button (click)="loginGoogles()"> Login con google </ion-button>
   <ion-footer>
     <ion-toolbar color="primary">
       <ion-buttons slot="end">
