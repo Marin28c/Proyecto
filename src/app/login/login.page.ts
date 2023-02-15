@@ -60,4 +60,16 @@ export class LoginPage implements OnInit {
     this.navegacion.navigateRoot('inicio');
  }
 
+ showPassword = false;
+ passwordToggleIcon='eye';
+
+ togglePassword():void{
+  this.showPassword = !this.showPassword;
+
+  if(this.passwordToggleIcon=='eye'){
+    this.passwordToggleIcon = 'eye-off';
+  }else{
+    this.passwordToggleIcon = 'eye';
+  }
+ }
 }

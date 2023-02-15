@@ -19,23 +19,6 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),
 
   },
-  {
-    path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
-
-  },
-  {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
-    path: 'publicar',
-    loadChildren: () => import('./publicar/publicar.module').then( m => m.PublicarPageModule)
-  },
-  {
-    path: 'publicaciones',
-    loadChildren: () => import('./publicaciones/publicaciones.module').then( m => m.PublicacionesPageModule)
-  },
 
 ];
 
